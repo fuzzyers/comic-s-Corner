@@ -29,6 +29,10 @@ export const POST = async (req: NextRequest) => {
             return NextResponse.json({message: "Invalid Login Credentials"})
         }
 
+        if (typeof SECRET !== "string"){
+            return NextResponse.json({ message: "Server Error"}, {status: 500})
+        }
+
         const token = jwt.sign({email: emailExists[0].email, username: emailExists[0].username}, SECRET, {
             expiresIn: "1hr",
         })

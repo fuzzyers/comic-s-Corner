@@ -11,11 +11,12 @@ const Login = () => {
     useEffect(() => {
         console.log(form)
     },[form])
-    
+
   return (
     <form>
         <Input title='Email' setData={setForm}/>
         <Input title='Password' setData={setForm}/>
+        <input type='submit'/>
     </form>
   )
 }
