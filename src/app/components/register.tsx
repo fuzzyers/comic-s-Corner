@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import Input from './input'
 import { RegisterAuth } from '../utils/authentication'
+import styles from "@/app/styles/authenticationForm.module.css"
 
 const Register = () => {
     const [form, setForm] = useState({
@@ -18,7 +19,7 @@ const Register = () => {
     }
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
+    <form onSubmit={(e) => handleSubmit(e)} className={styles.formContainer}>
         <h1>Signup</h1>
         <Input title='Email' setData={setForm} type='email'/>
         <Input title='Username' setData={setForm} type='text'/>

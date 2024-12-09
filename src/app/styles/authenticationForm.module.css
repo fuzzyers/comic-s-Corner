@@ -1,0 +1,31 @@
+
+.headerText {
+    color: blueviolet;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center; /* Align input and label vertically */
+    justify-content: space-between; /* Space between label and input */
+    margin-bottom: 1rem; /* Space between each input container */
+    flex-direction: column;
+}
+
+.inputLabel {
+    flex: 1; /* Takes up equal space */
+    text-align: right; /* Align label to the right */
+    margin-right: 1rem; /* Add space between label and input */
+}
+
+.inputField {
+    flex: 2; /* Input takes up more space */
+    padding: 0.5rem;
+    font-size: 1rem;
+}

@@ -1,5 +1,5 @@
 import React, { ChangeEvent, FC } from 'react'
-
+import styles from "@/app/styles/authenticationForm.module.css"
 type InputType = {
     title: string;
     setData: any;
@@ -18,9 +18,9 @@ const Input: FC<InputType> = ({title, setData, type}) => {
     }
 
   return (
-    <div>
-        <label>{title}</label>
-        <input name={title} onChange={(e) => handleChange(e)} type={type}/>
+    <div className={styles.inputContainer}>
+        <label className={styles.inputLabel}>{title}</label>
+        <input name={title} onChange={(e) => handleChange(e)} type={type} className={styles.inputField}/>
     </div>
   )
 }
